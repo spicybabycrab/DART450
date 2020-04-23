@@ -1,0 +1,179 @@
+
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>OnClick Buttons</title>
+	<link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+	<main>
+	    <section id="one">
+	        <button onclick="showTruck()">APPEAR</button>
+	        <button onclick="hideTruck()">DISAPPEAR</button>
+	        <button onclick="grimes()">GRIMES</button>
+	        <button onclick="grimesStop()">CRIMES</button>
+	        <button onclick="addElon()">MORE ELONS</button>
+	        <button onclick="subElon()">LESS ELONS</button>
+	       <div id="showNumber"></div>
+
+	    </section>
+	    <section id="two">
+	        <div id="truck"></div>
+	        <div id="grimes">
+	            <p id="aaa">GRIMES</p>
+	            <p id="bbb">GRIMES</p>
+	            <p id="ccc">CRIMES</p>
+	            <p id="ddd">CRIMES</p>
+	            <p id="eee">CRIMES</p>
+	        </div>
+	        <div id="musk">
+	            <div id="musk1"><img src="images/musk1.png" alt=""></div>
+	            <div id="musk2"><img src="images/musk2.png" alt=""></div>
+	            <div id="musk3"><img src="images/musk3.png" alt=""></div>
+	            <div id="musk4"><img src="images/musk4.png" alt=""></div>
+	            <div id="musk5"><img src="images/musk5.png" alt=""></div>
+	        </div>
+	    </section>
+	</main>
+
+	
+	<script>
+        
+        function hideTruck() {
+            document.getElementById("truck").style.opacity = "0";
+        }
+        
+        function showTruck() {
+            document.getElementById("truck").style.opacity = "1";
+        }
+        
+        function spinTruck() {
+            document.getElementById("truck").style.display = "none";
+        }
+        
+        function grimes(){
+            document.getElementById("aaa").style.top = "400px";
+            document.getElementById("bbb").style.top = "300px";
+            document.getElementById("ccc").style.top = "600px";
+            document.getElementById("ddd").style.top = "200px";
+            document.getElementById("eee").style.top = "500px";
+        }
+        
+        function grimesStop (){
+            document.getElementById("aaa").style.top = "-100px";
+            document.getElementById("bbb").style.top = "-100px";
+            document.getElementById("ccc").style.top = "-100px";
+            document.getElementById("ddd").style.top = "-100px";
+            document.getElementById("eee").style.top = "-100px";
+            
+        }
+        
+        
+        var elon = 0;
+        
+        document.getElementById("showNumber").innerHTML = elon;
+    
+        
+        function addElon() {
+            elon+=1;
+            document.getElementById("showNumber").innerHTML = elon;
+            
+                    if (elon == 1) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "0";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        } 
+        else if (elon == 2){
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        }
+        else if (elon == 3) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        }
+        else if (elon == 4) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "1";
+            document.getElementById("musk5").style.opacity = "0";
+        } 
+        else if (elon >= 5) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "1";
+            document.getElementById("musk5").style.opacity = "1";
+        }
+        else {
+            document.getElementById("musk1").style.opacity = "0";
+            document.getElementById("musk2").style.opacity = "0";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+            }
+        }
+        
+        
+        function subElon() {
+            elon-=1;
+            document.getElementById("showNumber").innerHTML = elon;
+            
+                    if (elon == 1) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "0";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        } 
+        else if (elon == 2){
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        }
+        else if (elon == 3) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+        }
+        else if (elon == 4) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "1";
+            document.getElementById("musk5").style.opacity = "0";
+        } 
+        else if (elon >= 5) {
+            document.getElementById("musk1").style.opacity = "1";
+            document.getElementById("musk2").style.opacity = "1";
+            document.getElementById("musk3").style.opacity = "1";
+            document.getElementById("musk4").style.opacity = "1";
+            document.getElementById("musk5").style.opacity = "1";
+        }
+        else {
+            document.getElementById("musk1").style.opacity = "0";
+            document.getElementById("musk2").style.opacity = "0";
+            document.getElementById("musk3").style.opacity = "0";
+            document.getElementById("musk4").style.opacity = "0";
+            document.getElementById("musk5").style.opacity = "0";
+            }
+        }
+	</script>
+	
+</body>
+</html>

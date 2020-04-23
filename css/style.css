@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css?family=Monda|ZCOOL+QingKe+HuangYou&display=swap');
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    background-color: midnightblue;
+    color: #fff;
+    height:100%;
+    transition: all .5s;
+    width: 100%;
+}
+
+body{
+    position:relative;
+    width: 100%;
+    padding:0;
+    margin:0;  
+}
+
+/* LINKS */
+a:link {
+  color: lawngreen;
+    text-decoration: none;
+}
+
+a:visited {
+  color: lawngreen;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+    text-decoration: none;
+}
+
+.columns{
+  display: flex;
+    flex-wrap:wrap;
+    width:100vw;
+    padding:0;
+    margin:0;
+}
+
+/* NAV */
+.sidebar-first{
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-size: 2vmax;
+width: 5%;
+background: midnightblue;
+height: 100vh;
+z-index: 100; 
+border-right: 1px solid white;
+left:0;
+position:fixed;
+justify-content: space-around;
+align-content: center center;
+overflow: hidden; 
+text-align: justify;
+}
+
+.topNav{
+padding:30%;
+transform:rotate(90deg);
+transform-origin: left bottom; 
+}
+
+.bottomNav{
+padding:30%;
+position:relative;
+top:60vh;
+transform:rotate(90deg);
+transform-origin: left bottom;
+}
+
+.sidebar-second{ 
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+font-size: 2vmax;
+width: 5%;
+background: midnightblue;
+    right:0;
+height: 100vh;
+z-index: 100; 
+border-left: 1px solid white;
+position:fixed;
+justify-content: space-around;
+align-content: center center;
+overflow: hidden; 
+text-align: justify;
+}
+
+.main{
+left:5%;
+width: 100%;
+background: midnightblue;
+}
+
+/* SPLASH */
+hgroup {
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 3% 5% 0% 5%;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 5vmax;
+    color: white;
+/*    background:red;*/
+}
+
+h1#hello:before {
+  content: '你好';
+}
+
+h1#hello:hover:before {
+  content: 'hello';
+}
+
+h1#my:before {
+  content: '我的';
+}
+
+h1#my:hover:before {
+  content: 'my';
+}
+
+h1#name:before {
+  content: '名字';
+}
+
+h1#name:hover:before {
+  content: 'name';
+}
+
+h1#is:before {
+  content: '是';
+}
+
+h1#is:hover:before {
+  content: 'is';
+}
+
+h1#lelin:before {
+  content: '林乐';
+}
+
+h1#lelin:hover:before {
+  content: 'le lin';
+}
+
+#container {
+    position:relative;
+    height:60vh;
+    margin-bottom: 200px;
+}
+
+canvas{
+    position:absolute;
+    width: 100%;
+}
+
+#welcome {    
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+    /*display: flex;*/
+    position: absolute;
+    top: 85%;
+    overflow: hidden;
+    font-size:3vmax;
+    align-items: center; 
+    justify-content: center;
+    text-align: center;
+    width:90%;
+    left:5%;
+}
+
+/* ---ABOUT--- */
+#about
+{
+background-size: cover;
+background: url(../images/about.jpg) center center fixed;
+margin-bottom: 100px;
+}
+    
+#about article
+{
+padding: 9vmax;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+align-items: center; 
+justify-content: center;
+font-size: 3vmax; 
+width:100%; 
+text-align: center;       
+}
+
+/* ---PROJECTS--- */
+#projects
+{
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+align-items: center; 
+justify-content: center;
+width:100%; 
+text-align: center;  
+margin-bottom: 100px;
+}
+
+#projects div{
+    display:inline;
+    margin:5%;
+    border:none;
+}
+
+#projects a{
+    text-decoration: none;
+}
+
+h1#midterm:before {
+  content: '期中';
+    color: lawngreen;
+}
+
+h1#midterm:hover:before {
+  content: 'midterm';
+
+}
+
+h1#final:before {
+  content: '期末';
+      color: lawngreen;
+}
+
+h1#final:hover:before {
+  content: 'final';
+}
+
+/* ---READINGS--- */
+#readings {
+	padding:9vmax;
+	display: grid;
+	grid-gap: 40px;
+/*	grid-template-columns: repeat(5, 1fr);*/
+/*	grid-template-columns: repeat( 5, minmax(250px, 1fr) );*/
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 0px;
+}
+
+figure {
+    border:solid 2px white;
+    border-radius: 10%;
+}
+img {
+	display: block;
+	width: 100%;
+   border-radius: 10%;
+}
+
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color:white;
+  margin: auto;
+  padding: 0;
+  border: 2px solid lawngreen;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {bottom:-300px; opacity:0} 
+  to {bottom:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {bottom:-300px; opacity:0}
+  to {bottom:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: lawngreen;
+  float: right;
+  font-size: 3vmax;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: yellow;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+padding: 3% 3%;
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+color: midnightblue;
+}
+
+.modal-body {
+padding: 3% 3%;
+font-size: 12px;
+font-family: 'Monda', sans-serif;
+color: midnightblue;
+}
+
+/* ---EXCERCISES--- */
+#excercises {
+font-family: 'ZCOOL QingKe HuangYou', cursive;
+align-items: center; 
+justify-content: center;
+width:100%; 
+text-align: center;  
+margin-bottom:500px;
+}
+
+#excercises div {
+    display:inline;
+    margin:8%;
+    border:none;
+}
+
+#excercises h1{
+    color:white;
+}
+
+#excercises a{
+    text-decoration: none;
+}
+
+h1#one:before {
+  content: '一';
+}
+
+h1#one:hover:before {
+  content: '1';
+}
+
+h1#two:before {
+  content: '二';
+}
+
+h1#two:hover:before {
+  content: '2';
+}
+
+h1#three:before {
+  content: '三';
+}
+
+h1#three:hover:before {
+  content: '3';
+}
+
+h1#four:before {
+  content: '四';
+}
+
+h1#four:hover:before {
+  content: '4';
+}
+
+h1#five:before {
+  content: '五';
+}
+
+h1#five:hover:before {
+  content: '5';
+}
+
+h1#six:before {
+  content: '六';
+}
+
+h1#six:hover:before {
+  content: '6';
+}
+
+/*
+h1#seven:before {
+  content: '七';
+}
+
+h1#seven:hover:before {
+  content: '7';
+}
+
+h1#eight:before {
+  content: '八';
+}
+
+h1#eight:hover:before {
+  content: '8';
+}
+*/

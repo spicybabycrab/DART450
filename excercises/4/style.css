@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Concert+One&display=swap');
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+    margin:2%;
+    padding:0;
+}
+
+body {
+  background: #fff;
+  color: #964b00;
+  font-family: 'Concert One', cursive;
+  font-size: 16px;
+}
+#wrap {
+  margin: 0 auto;
+  max-width: 992px;
+}
+p {
+  line-height: 1.6em;
+}
+a {
+  color: #c644fc;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-bottom 0.8s;
+}
+a:hover {
+  border-bottom: 1px solid #5856d6;
+}
+input[type="checkbox"],
+label {
+  cursor: pointer;
+}
+::selection {
+  color: #000;
+  background-color: #e6ff00;
+}
+#increase,
+#decrease,
+#default {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  margin: 0;
+  padding: 5px 10px 5px 10px;
+}
+#increase:hover,
+#decrease:hover,
+#default:hover {
+  background-color: #ccc;
+}
+#increase:active,
+#decrease:active,
+#default:active {
+  background-color: #ff0;
+}
+#increase {
+  border-radius: 10px 0 0 10px;
+}
+#decrease {
+  border-radius: 0 10px 10px 0;
+  border-right: 1px solid #000;
+}
+li {
+  padding: 5px;
+}

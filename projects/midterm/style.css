@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|ZCOOL+XiaoWei|Sawarabi+Mincho|Tajawal&display=swap');
+
+/* resetttttt */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+    font-family: 'Tajawal', serif;
+}
+
+::selection {
+    color: white;
+    background-color: red;
+}
+
+section {
+    padding: 2%;
+    position: relative;
+    margin-bottom: 15vw;
+}
+
+
+/* NAV */
+
+
+span#hamburger {
+    font-size: 16px;
+    cursor: pointer;
+    position: fixed;
+    color: black;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 20px;
+    z-index: 1;
+    transition: all .3s;
+    opacity: .8;
+    border: 1px solid black;
+    background: none;
+    font-family: 'cutive mono', monospace;
+}
+
+span#hamburger:hover {
+    opacity: 1;
+    background: red;
+    color: white;
+    border: 1px solid white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0px 40px 0px;
+    /*
+    border-right:1px solid #fff;
+    border-bottom: 1px solid #fff;
+*/
+}
+
+.sidenav a {
+    padding: 8px 8px 30px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+
+/* SPLASH */
+
+#splash {
+    width: 100%;
+    height: 100%;
+    background: url(images/bg2.jpg) fixed center left;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#splash hgroup {
+    text-align: center;
+    padding: 2%;
+    /*    width: 100%;*/
+    padding-bottom: 40px;
+}
+
+#splash hgroup h1 {
+    font-family: 'sawarabi mincho', sans-serif;
+    font-size: 4vw;
+    color: white;
+    letter-spacing: .2vw;
+    transition: all .3s;
+    font-weight: 200;
+    background: rgba(255, 0, 0, .7);
+}
+
+#splash hgroup h1:hover {
+    background: rgba(255, 0, 0, .3);
+    filter: invert(1);
+}
+
+#splash hgroup h3 {
+    font-size: 16px;
+    color: white;
+    opacity: .8;
+    margin-top: 1vw;
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+
+/*FIGURE*/
+
+figure.left {
+    width: 40%;
+    float: left;
+    padding: 0px 15px 0px 0px;
+    margin: 5px 7px 0px 0px;
+}
+
+
+figure.right {
+    width: 40%;
+    max-width: 300px;
+    float: right;
+    padding: 0px 0px 0px 15px;
+    margin: 5px 0px 0px 7px;
+}
+
+figure.center {
+    width: 85%;
+    margin: 30px auto;
+}
+
+figure img {
+    width: 100%;
+}
+
+
+
+/* ESSAY */
+
+#essay {
+    background: white;
+}
+
+#essay article {
+    width: 60%;
+    margin: 20px auto;
+    padding: 40px;
+    color: black;
+}
+
+
+#essay article p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
+    font-weight: 300;
+    /*    text-indent: 20px;*/
+}
+
+#essay p.big {
+    color: black;
+    font-size: 25px;
+    text-indent: 0px;
+}
+
+#essay p b {
+    font-size: 17px;
+}
+
+
+/*essay links*/
+
+#essay article a:link {
+    color: black;
+    text-decoration: indianred;
+}
+
+#essay article a:visited {
+    color: black;
+    text-decoration: indianred;
+}
+
+#essay article a:hover {
+    text-decoration: none;
+}
+
+#essay article a:active {
+    color: black;
+    text-decoration: indianred;
+}
+
+
+#essay figcaption {
+    font-style: italic;
+    text-align: center;
+    color: darkgrey;
+}
+
+
+/*MOODBOARD*/
+
+#mood {
+    background: white;
+    color: balck;
+}
+
+#mood h1 {
+    margin-bottom: 55px;
+    margin-top: 45px;
+    text-align: left;
+    font-size: 45px;
+    font-family: 'sawarabi mincho', sans-serif;
+    letter-spacing: 3px;
+    padding: 25px 25px 0px 0px;
+}
+
+#mood article {
+    width: 90%;
+    margin: 0px auto 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+
+#mood .left {
+    margin: 20px;
+    width: 22%;
+    min-width: 270px;
+}
+
+
+#mood .square {
+    font-family: 'sawarabi mincho', sans-serif;
+    font-size: 20px;
+    color: black;
+    padding: 9px 14px 7px 0px;
+    margin: 10px 10px 10px 0px;
+    display: inline-block;
+}
+
+
+#mood article p {
+    margin-bottom: 15px;
+}
+
+#mood article ol {
+    margin-bottom: 15px;
+    font-size: 16px;
+    text-align: justify;
+    font-weight: 300;
+    text-indent: 20px;
+}
+
+#mood article li {
+    margin-bottom: 20px;
+}
+
+#mood .center {
+    margin-bottom: 100px;
+}
+
+#mood figcaption {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    font-family: 'cutive Mono', sans-serif;
+    margin: 95px 0px;
+    text-transform: lowercase;
+}
+
+#mood a:link {
+    font-family: 'cutive Mono', monospace;
+    color: black;
+    text-decoration: underline;
+    font-size: 16px;
+    transition: all .3s;
+}
+
+#mood a:visited {
+    color: black;
+    text-decoration-color: black;
+}
+
+#mood a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+#mood a:active {
+    color: red;
+    text-decoration-color: white;
+}
+
+#mood b,
+strong {
+    font-family: 'sawarabi mincho', sans-serif;
+    font-size: 14px;
+    color: white;
+    background: lightgrey;
+    padding: 2px 2px 0px 2px;
+}
+
+#mood .flexy {
+    position: relative;
+    height: 75vh;
+    /*    background: grey;*/
+}
+
+#mood .small {
+    width: 20%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    /*    transform: translate(0%,-25%);*/
+    border: 1px solid grey;
+}
+
+#mood .small:hover {
+    cursor: grab;
+}
+
+#mood .small:active {
+    z-index: 100;
+}
+
+span.red {
+    color: red;
+}
+
+.container {
+    /*    border: 5px solid grey;*/
+}
+
+
+
+/*WIREFRAMES*/
+
+#wireframe h1 {
+    margin-bottom: 25px;
+    font-size: 45px;
+    font-family: 'sawarabi mincho', sans-serif;
+    color: black;
+    letter-spacing: 3px;
+    padding: 50px 0px 25px 50px;
+    width: 90%;
+    margin: auto;
+}
+
+
+#wireframe {
+    background: white;
+}
+
+#wireframe article {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+/*
+#wireframe figure {
+    padding: 20px;
+    width: 48%;
+    min-width: 500px;
+}
+*/
+
+#wireframe figcaption {
+    text-align: center;
+    color: black;
+    margin-top: 6px;
+    font-size: 17px;
+}
+
+
+#wireframe img {
+    width: 100%;
+    /*    border: 1px solid black;*/
+}
+
+
+
+
+
+/*MOCKUP*/
+
+#mockup {
+    background: white;
+}
+
+#mockup article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 95%;
+    padding-bottom: 100px;
+}
+
+#mockup h1 {
+    margin: auto;
+    padding: 25px 0px 25px 50px;
+    font-size: 45px;
+    font-family: 'sawarabi mincho', sans-serif;
+    color: black;
+    letter-spacing: 3px;
+    padding-top: 25px;
+    text-align: left;
+    width: 90%;
+}
+
+
+#mockup h2 {
+    font-family: 'cutive Mono', monospace;
+    text-align: left;
+    font-size: 20px;
+    text-transform: lowercase;
+    color: black;
+    letter-spacing: 1px;
+    margin: auto;
+    padding: 15px 0px 15px 50px;
+    width: 90%;
+}
+
+
+#mockup img {
+    border: 1px solid black;
+}
+
+#mockup .big {
+    width: 90%;
+    padding: 1%;
+}
+
+#mockup .med {
+    width: 38%;
+    margin: 5% 5%;
+}
+
+#mockup .small {
+    width: 25%;
+    margin: 5% 5%;
+}
+
+#mockup a {
+    padding-left: 110px;
+}
+
+
+/*BIBLIOGRAPHY*/
+
+#bib {
+    background: white;
+}
+
+#bib article {
+    width: 60%;
+    margin: auto;
+    padding: 60px 0px;
+}
+
+#bib article p {
+    color: black;
+    opacity: .8;
+    margin-bottom: 15px;
+    font-size: 14px;
+}

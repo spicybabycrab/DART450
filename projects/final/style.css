@@ -1,0 +1,997 @@
+@import url('https://fonts.googleapis.com/css?family=Cutive+Mono|ZCOOL+XiaoWei|Sawarabi+Mincho|Tajawal&display=swap');
+
+/*
+blue: #414257
+red: #d77d5a
+brown: #524235
+yellow: #ddd3a2
+light blue: #acb5bc
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Tajawal';
+    color: #414257;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Sawarabi Mincho';
+}
+
+
+
+/*  ================== MENU ==================  */
+
+
+#myNav {
+    position: fixed;
+    height: 100vh;
+    top: -100%;
+    width: 100%;
+
+}
+
+.overlay {
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+    overflow-y: hidden;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    padding: 4%;
+}
+
+.overlay-content h2 {
+    text-align: right;
+    font-weight: normal;
+    margin-bottom: 30px;
+    margin-right: 15%;
+    font-size: 34px;
+    color: #d77d5a;
+}
+
+
+#home a{
+    position: absolute;
+    top: 8%;
+    left: 18.5%;
+    background: #d77d5a;
+    color: white;
+    padding: 5px 5px 0px 5px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+#home a:hover{
+        background: #ddd3a2;
+
+}
+
+
+.overlay .closebtn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 2%;
+    margin-top: 1.5%;
+    font-size: 40px;
+    z-index: 3;
+    text-decoration: none;
+    color: #818181;
+}
+
+#menuContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80vh;
+    width: 90%;
+    margin: auto;
+    /*    background: green;*/
+}
+
+.menuColumn {
+    width: 30%;
+}
+
+.menuLink {
+    /*    background: lightblue;*/
+    margin-bottom: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuLink img {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    margin: 8px;
+    transition: transform .3s;
+    cursor: pointer;
+}
+
+.menuLink:hover img {
+    transform: scale(1.3);
+}
+
+.menuLink span {
+    padding: 20px;
+}
+
+.menuLink h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.menuLink a {
+    background: #acb5bc;
+    color: white;
+    text-decoration: white;
+    padding: 1px;
+    transition: all .3s;
+
+}
+
+.menuLink:hover a {
+    background: #414257;
+}
+
+#menuButton {
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    margin: 1.5%;
+    cursor: pointer;
+    color: #414257;
+    padding: 10px 10px 5px 10px;
+    border-radius: 10px;
+    transition: all .3s;
+    background: white;
+    border: 1px solid;
+}
+
+#menuButton:hover {
+    background: #414257;
+    color: white;
+}
+
+
+/*  ================== FRONT PAGE ==================  */
+
+
+#splash {
+    height: 100vh;
+    position: relative;
+    background: url("/images/mockup_home_01.jpg") center center;
+    background-size: cover;
+}
+
+#splash h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 90px;
+    line-height: 110px;
+    transform: translate(-50%, -53%);
+    text-align: left;
+    font-weight: normal;
+    color: #d77d5a;
+}
+
+#splash span {
+    position: relative;
+}
+
+#splash .asian {
+    left: 70px;
+}
+
+#splash .mythsAnd {
+    left: 40px;
+}
+
+#splash .legends {
+    left: 75px;
+}
+
+#splash .gradient {
+    width: 100%;
+    height: 15vh;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 5%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    bottom: 0;
+}
+
+#intro {
+    /*    background: lightgreen;*/
+    position: relative;
+    height: 90vh;
+}
+
+.introParagraph {
+    width: 25%;
+
+}
+
+.introParagraph p {
+    font-size: 16px;
+}
+
+.introParagraph h2 {
+    font-size: 20px;
+    margin-bottom: 5%;
+
+}
+
+#ip1 {
+    position: absolute;
+    top: 15%;
+    right: 8%;
+}
+
+#ip1 h2 {
+    text-align: left;
+}
+
+#ip2 {
+    position: absolute;
+    top: 60%;
+    left: 10%;
+}
+
+#ip2 h2 {
+    position: absolute;
+    top: 110%;
+    right: 15%;
+    text-align: right;
+}
+
+
+#intro img {
+    width: 35%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -10;
+}
+
+
+
+#map {
+    background: url("images/mockup_map.jpg") center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    /*    margin: 2vh;*/
+}
+
+
+#map figure {
+    width: 80px;
+    position: absolute;
+/*    background: pink;*/
+    transform: translate(-50%,-50%);
+    cursor: pointer;
+
+}
+
+#map img {
+    width: 100%;
+    transition: all .3s;
+}
+
+#map figcaption {
+    position: absolute;
+    left: 110%;
+    background: #524235;
+    font-family: 'Sawarabi Mincho';
+    color: white;
+    display: none;
+    line-height: 16px;
+    width: 150%;
+/*    opacity: 0;*/
+    transition: all .3s;
+    font-size: 18px;
+}
+
+#map figure:hover figcaption {
+    display: inline;
+}
+
+#map figure:hover img {
+    transform: scale(2);
+}
+
+
+#cutsleeveicon {
+    top: 30%;
+    left: 50%;
+}
+
+#womensicon {
+    top: 40%;
+    left: 55%;
+}
+
+#lancaiheicon {
+    top: 38%;
+    left: 38%;
+    
+}
+
+#fragicon {
+    top: 44%;
+    left: 46%;
+    
+}
+
+#peachicon {
+    top: 28%;
+    left: 34%;
+    
+}
+
+#tuericon {
+    top: 20%;
+    right: 32%;
+    
+}
+
+#amaticon {
+    top: 28%;
+    right: 17%;
+    
+}
+
+#staricon {
+    top: 38%;
+    right: 22%;
+    
+}
+
+#lakaicon {
+    top: 63%;
+    right: 33%;
+    
+}
+
+/*  ================== STORY ==================  */
+
+.story {
+    position: relative;
+    min-height: 100vh;
+    /*    padding: 4%;*/
+}
+
+.story img {
+    position: absolute;
+    height: auto;
+}
+
+.story p {
+    font-size: 16px;
+}
+
+.story h1 {
+    font-size: 2.7vw;
+    background: #414257;
+    color: white;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-weight: normal;
+}
+
+.story h2 {
+    color: #ddd3a2;
+}
+
+
+/*  ================== EMPEROR AI ==================  */
+
+#emperor {
+    /*    background: linear-gradient(180deg, rgba(172, 181, 188, 1) 0%, rgba(172, 181, 188, 0) 70%);*/
+
+}
+
+.emperor {
+    position: absolute;
+    text-align: center;
+}
+
+
+.emperor#drawing {
+    bottom: 0;
+    left: 2%;
+    width: 55vw;
+}
+
+
+.emperor#p1 {
+    width: 30%;
+    top: 12%;
+    right: 25%;
+    font-size: 18px;
+}
+
+.emperor#title {
+    width: 40%;
+    top: 25%;
+    right: 8%;
+}
+
+.emperor#p2 {
+    width: 26%;
+    bottom: 25%;
+    right: 8%;
+}
+
+.emperor#p3 {
+    width: 26%;
+    bottom: 10%;
+    right: 15%;
+    font-size: 20px;
+}
+
+
+
+/*  ================== WOMENS KINGDOM ==================  */
+
+#womens {
+    /*    background: linear-gradient(180deg, rgba(172, 181, 188, 1) 0%, rgba(172, 181, 188, 0) 100%);*/
+}
+
+.womens {
+    position: absolute;
+    text-align: center;
+}
+
+
+.womens#drawing {
+    top: 4%;
+    right: 3%;
+    width: 52%;
+}
+
+
+.womens#title {
+    width: 30%;
+    top: 28%;
+    left: 10%;
+}
+
+.womens#p1 {
+    width: 20%;
+    top: 53%;
+    left: 20%;
+    font-size: 20px;
+}
+
+.womens#p2 {
+    width: 25%;
+    top: 75%;
+    left: 13%;
+    font-size: 18px;
+}
+
+.womens#p3 {
+    width: 35%;
+    top: 110%;
+    right: 33%;
+    font-size: 22px;
+}
+
+.womens#p4 {
+    width: 40%;
+    top: 140%;
+    right: 20%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+
+/*  =============== FRAGRANT COMPANION ===============  */
+
+
+#fragrant {
+    background: white;
+    /*        background: linear-gradient(180deg, rgba(172, 181, 188, 1) 0%, rgba(172, 181, 188, 0) 100%);*/
+    background: linear-gradient(180deg, rgba(221, 211, 162, 1) 0%, rgba(221, 211, 162, 0) 70%);
+    /*    background: linear-gradient(180deg, rgba(215,125,90,1) 0%, rgba(215,125,90,0) 100%);*/
+
+}
+
+#fragrant h1 {
+    font-size: 4vw;
+}
+
+.fragrant {
+    position: absolute;
+    text-align: center;
+}
+
+
+.fragrant#drawing {
+    top: 6%;
+    left: 3%;
+    width: 50%;
+}
+
+
+.fragrant#title {
+    width: 30%;
+    top: 45%;
+    right: 13%;
+}
+
+.fragrant#p1 {
+    width: 28%;
+    top: 17%;
+    right: 8%;
+    font-size: 18px;
+}
+
+.fragrant#p2 {
+    width: 45%;
+    top: 90%;
+    right: 18%;
+    font-size: 16px;
+}
+
+.fragrant#p3 {
+    width: 35%;
+    top: 120%;
+    left: 25%;
+    font-size: 20px;
+}
+
+.fragrant#p4 {
+    width: 40%;
+    top: 150%;
+    right: 20%;
+    font-size: 22px;
+    margin-bottom: 10%;
+}
+
+
+
+/*  =============== LEFTOVER PEACH ===============  */
+
+
+#peach {}
+
+
+.peach {
+    position: absolute;
+    text-align: center;
+}
+
+
+.peach#drawing {
+    top: -7%;
+    left: -3%;
+    width: 50%;
+}
+
+
+.peach#drawing2 {
+    top: 85%;
+    right: 1%;
+    width: 40%;
+}
+
+.peach#title {
+    width: 50%;
+    top: 45%;
+    right: 10%;
+}
+
+.peach#p1 {
+    width: 28%;
+    top: 20%;
+    right: 25%;
+    font-size: 18px;
+}
+
+.peach#p2 {
+    width: 35%;
+    top: 80%;
+    left: 24%;
+    font-size: 20px;
+}
+
+.peach#p3 {
+    width: 35%;
+    top: 120%;
+    left: 15%;
+    font-size: 22px;
+}
+
+.peach#p4 {
+    width: 40%;
+    top: 160%;
+    right: 20%;
+    font-size: 20px;
+    margin-bottom: 10%;
+}
+
+
+/*  ================== LAN CAIHE ==================  */
+
+#lan {}
+
+.lan {
+    position: absolute;
+    text-align: center;
+}
+
+
+.lan#drawing {
+    top: 28%;
+    right: 2%;
+    width: 55%;
+}
+
+
+.lan#title {
+    width: 25%;
+    top: 45%;
+    left: 22%;
+}
+
+.lan h1 {
+    font-size: 4vw;
+}
+
+.lan#p1 {
+    width: 40%;
+    top: 12%;
+    right: 22%;
+    font-size: 22px;
+}
+
+.lan#p2 {
+    width: 30%;
+    top: 80%;
+    left: 13%;
+    font-size: 20px;
+}
+
+.lan#p3 {
+    width: 45%;
+    top: 128%;
+    right: 33%;
+    font-size: 18px;
+}
+
+.lan#p4 {
+    width: 40%;
+    top: 160%;
+    right: 20%;
+    font-size: 22px;
+    margin-bottom: 10%;
+}
+
+.lan#p5 {
+    width: 45%;
+    top: 190%;
+    right: 20%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+
+/*  ================== RABBIT GOD ==================  */
+
+#tuer {
+    background: linear-gradient(180deg, rgba(221, 211, 162, 1) 0%, rgba(221, 211, 162, 0) 80%);
+}
+
+.tuer {
+    position: absolute;
+    text-align: center;
+}
+
+
+.tuer#drawing {
+    top: 10%;
+    left: 50%;
+    width: 55%;
+    transform: translate(-50%, 0%);
+}
+
+.tuer#drawing2 {
+    top: 130%;
+    left: 30%;
+    width: 40%;
+}
+
+
+.tuer#title {
+    width: 25%;
+    top: 25%;
+    left: 9%;
+}
+
+.tuer h1 {
+    font-size: 3vw;
+}
+
+.tuer#p1 {
+    width: 20%;
+    top: 28%;
+    right: 10%;
+    font-size: 22px;
+}
+
+.tuer#p2 {
+    width: 45%;
+    top: 98%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 18px;
+}
+
+.tuer#p3 {
+    width: 30%;
+    top: 125%;
+    left: 13%;
+    font-size: 20px;
+}
+
+.tuer#p4 {
+    width: 30%;
+    top: 190%;
+    right: 20%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+/*  ================== AMATERASU ==================  */
+
+#amat {
+    /*        background: linear-gradient(180deg, rgba(172, 181, 188, 1) 0%, rgba(172, 181, 188, 0) 100%);*/
+
+}
+
+.amat {
+    position: absolute;
+    text-align: center;
+}
+
+
+.amat#drawing {
+    top: 6%;
+    left: 3%;
+    width: 55%;
+}
+
+
+.amat#title {
+    width: 25%;
+    top: 35%;
+    right: 22%;
+}
+
+.amat h1 {
+    font-size: 4vw;
+}
+
+.amat#p1 {
+    width: 30%;
+    top: 65%;
+    right: 10%;
+    font-size: 22px;
+}
+
+.amat#p2 {
+    width: 45%;
+    top: 98%;
+    right: 17%;
+    font-size: 20px;
+}
+
+.amat#p3 {
+    width: 25%;
+    top: 128%;
+    right: 33%;
+    font-size: 20px;
+}
+
+.amat#p4 {
+    width: 45%;
+    top: 160%;
+    left: 20%;
+    font-size: 22px;
+    margin-bottom: 10%;
+}
+
+.amat#p5 {
+    width: 45%;
+    top: 190%;
+    right: 20%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+
+/*  ================== STAR-CROSSED LOVERS ==================  */
+
+#star {
+    /*        background: linear-gradient(180deg, rgba(172, 181, 188, 1) 0%, rgba(172, 181, 188, 0) 100%);*/
+
+}
+
+.star {
+    position: absolute;
+    text-align: center;
+}
+
+
+.star#drawing {
+    top: 3%;
+    left: 50%;
+    width: 45%;
+    transform: translateX(-50%);
+}
+
+
+.star#title {
+    top: 70%;
+    left: 50%;
+    width: 45%;
+    transform: translateX(-50%);
+}
+
+.star h1 {
+    font-size: 3vw;
+}
+
+.star#p1 {
+    width: 40%;
+    top: 110%;
+    left: 15%;
+    font-size: 18px;
+}
+
+.star#p2 {
+    width: 35%;
+    top: 140%;
+    right: 17%;
+    font-size: 20px;
+}
+
+.star#p3 {
+    width: 25%;
+    top: 168%;
+    left: 33%;
+    font-size: 24px;
+}
+
+.star#p4 {
+    width: 30%;
+    top: 195%;
+    left: 22%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+/*  =============== LAKAPATI ===============  */
+
+
+#laka {}
+
+
+.laka {
+    position: absolute;
+    text-align: center;
+}
+
+
+.laka#drawing {
+    top: 4%;
+    right: 5%;
+    width: 50%;
+}
+
+
+.laka#drawing2 {
+    top: 95%;
+    left: 1%;
+    width: 45%;
+}
+
+.laka#drawing3 {
+    top: 170%;
+    left: 60%;
+    transform: translateX(-50%);
+    width: 35%;
+}
+
+.laka#title {
+    width: 35%;
+    top: 25%;
+    left: 15%;
+}
+
+.laka#p1 {
+    width: 30%;
+    top: 60%;
+    left: 20%;
+    font-size: 20px;
+}
+
+.laka#p2 i,
+.laka#p5 i {
+    font-size: 14px;
+    opacity: 0;
+    position: absolute;
+    background: white;
+    z-index: 1;
+    transition: opacity .3s;
+    padding: 15px;
+    width: 70%;
+    border: 1px solid #acb5bc;
+    left: 0;
+}
+
+.laka#p2:hover i,
+.laka#p5:hover i {
+    opacity: .95;
+}
+
+
+.laka#p2 {
+    width: 35%;
+    top: 95%;
+    right: 30%;
+    font-size: 22px;
+    z-index: 1;
+}
+
+.laka#p3 {
+    width: 35%;
+    top: 125%;
+    left: 45%;
+    font-size: 20px;
+}
+
+.laka#p4 {
+    width: 25%;
+    top: 185%;
+    left: 15%;
+    font-size: 18px;
+    margin-bottom: 10%;
+}
+
+
+.laka#p5 {
+    width: 40%;
+    top: 240%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 20px;
+    margin-bottom: 10%;
+}

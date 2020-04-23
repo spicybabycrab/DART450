@@ -1,0 +1,104 @@
+html, body {
+  font-family: 'gotham', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.animated {
+  animation-duration: .6s;
+  opacity: 0;
+}
+
+.filler {
+  background-color:red;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: yellow;
+}
+
+.row {
+  background: red;
+  background-image: linear-gradient(to right, red 0%, yellow 100%);
+  padding: 4rem;
+  overflow: hidden;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.row-block {
+  background: orange;
+  background-image: linear-gradient(to right, yellow 0%, red 100%);
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.box {
+  background-color:yellow;
+  padding: 2rem;
+  flex: 0 0 50%;
+}
+.box h1 {
+  text-transform: uppercase;
+  color: red;
+}
+.box a {
+  color: black;
+}
+
+.image {
+  flex: 0 0 50%;
+}
+.image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.align-center {
+  text-align: center;
+  background: yellow;
+}
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  background: red;
+  height: 12rem;
+  width: 12rem;
+  margin: 2rem;
+}
+
+.delay-1 {
+  animation-delay: .2s;
+}
+
+.delay-2 {
+  animation-delay: .4s;
+}
+
+.rule {
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+  padding: 2px 0;
+  height: 3px;
+  border: 0;
+  border-top: 3px solid yellow;
+  transition: width 3s linear;
+}
+
+.shrink {
+  width: 0%;
+}
+
+.grow {
+  width: 100%;
+}
